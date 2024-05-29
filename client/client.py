@@ -8,15 +8,15 @@ def send_messages(s, username):
     while True:
         data = input(f"{username}: ")
         if not data:
-            break
-        s.sendall(f"{username}: {data}".encode())
+            continue
+        s.sendall(f"{data}".encode())
 
 def receive_messages(s):
     while True:
         data = s.recv(1024).decode()
         if not data:
             break
-        print(data)
+        print(f'\n{data}')
 
 def main():
     username = input("Enter Username: ")
