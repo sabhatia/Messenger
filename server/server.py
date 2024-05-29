@@ -64,7 +64,8 @@ def send_user_list(conn):
         usernames = [user for user, _ in client_list]
         usernames.sort()  # Sort usernames alphabetically
         user_list = "\n".join(usernames)
-        conn.sendall(f"Current Users:\n{user_list}".encode())
+        conn.sendall(f'Connected to server!'.encode())
+        #conn.sendall(f"Current Users:\n{user_list}".encode())
 
 
 def main():
